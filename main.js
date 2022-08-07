@@ -1,13 +1,17 @@
-let cantidad = parseInt(prompt("Ingresar un numero"));
-
-for(let i = 0;i < cantidad; i++){
-    alert("Hola " + (i+1));
+ function calcularCuotas(){
+    let monto = parseInt(prompt("Ingrese un monto a calcular. (Ingrese 0 para salir)"));
+    let cuotas = parseInt( prompt("Ingrese cantidad de cuotas deseasas (MAX 12 con intereses)"));
+    while (monto != 0){
+    if (cuotas > 12){
+        alert("La cantidad de cuotas no puede ser mayor a 12")
+    }
+    else{
+        alert("Las cuotas son de $" + monto/cuotas * 1.25)
+    }
+    monto = parseInt(prompt("Ingrese un monto a calcular. (Ingrese 0 para salir)"));
+    cuotas = parseInt( prompt("Ingrese cantidad de cuotas deseasas (MAX 12)"));
+    }
+    alert("Ciclo finalizado");
 }
 
-let numero = parseInt(prompt("ingrese un numero"));
-
-while (numero <= 50){
-    alert("Su numero es: " + numero)
-    numero = numero + parseInt(prompt( "Ingrese otro numero"))
-}
-alert("Su numero es " + numero + ", ciclo finalizado por numero mayor a 50")
+calcularCuotas()
