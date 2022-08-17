@@ -1,0 +1,20 @@
+body{
+    background-color: skyblue;
+}
+
+.navbar {
+    background-color: #4682B4;
+    background-image: url("../images/cielo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.45);
+    width: 100%;
+    z-index: 1000; }
+
+    .img.principal{
+        margin-left: 30rem;
+    }
