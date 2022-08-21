@@ -1,4 +1,12 @@
-let productos = [
+function mostrarMsj() {
+    let person = prompt("Ingrese su nombre ");
+    if (person != null) {
+      document.getElementById("usuario").innerHTML =
+      "Hola " + person + " " + "podes ver nuestros productos en la seccion PRODUCTOS!";
+    }
+  }
+
+/* let productos = [
     { Modelo: 787, Fabricante: "Boeing", Aerolinea: "Aeromexico", precio: 20000 },
     { Modelo: 737, Fabricante: "Boeing", Aerolinea: "Aerolineas Argentinas", precio: 19000 },
     { Modelo: 777, Fabricante: "Boeing", Aerolinea: "Fly Emirates", precio: 18000 },
@@ -17,7 +25,9 @@ function carritoCompras(){
     });
 }
 
-carritoCompras()
+carritoCompras() */
+
+
 
 
 
