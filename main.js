@@ -7,7 +7,7 @@ function formulario() {
 }
 
 
-
+ 
 /* function mostrarMsj() {
     let person = prompt("Ingrese su nombre ");
     if (person != null) {
