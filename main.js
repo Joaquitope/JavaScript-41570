@@ -1,9 +1,35 @@
 function formulario() {
-    const nombre = document.getElementById("nombre").value;
-    const valor = document.getElementById("valor").value;
-    const cuotas = document.getElementById("cuotas").value;
+    let nombre = document.getElementById("nombre").value;
+    
+    if(nombre == ''){
+        alert("no ingreso ningun nombre, se mostrara el ultimo ingresado")
+        nombre = localStorage.getItem('nombreUsuario')
+    }else{
+        localStorage.setItem('nombreUsuario', JSON.stringify(nombre))
+    }
 
+    let valor = document.getElementById("valor").value;
+
+     if(valor == ''){
+        alert("Debe ingresar un valor")
+        valor = localStorage.getItem('valorUsuario')
+    }else{
+        localStorage.setItem('valorUsuario', JSON.stringify(valor))
+    }
+    
+
+    let cuotas = document.getElementById("cuotas").value;
+    
+    if(cuotas == '' || cuotas > 12){
+        alert("Debe ingresar una cantidad de cuotas, la cual la max son 12")
+        cuotas = localStorage.getItem('cuotasUsuario')
+    }else{
+        localStorage.setItem('cuotasUsuario', JSON.stringify(cuotas))
+    }
+    
     document.getElementById("msj").innerHTML = "Hola " + nombre + " " + "el precio final en "  + cuotas + " " + "cuotas seria de: " + valor/cuotas; 
+
+    
 }
 
 
